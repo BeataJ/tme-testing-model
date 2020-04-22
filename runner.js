@@ -8,6 +8,10 @@ class Runner {
 
   async runTests() {
     for (let file of this.testFiles) {
+      global.it = (desc, fn) => {
+        console.log(desc);
+      };
+
       require(file.name);
     }
   }
