@@ -8,6 +8,10 @@ class Runner {
 
   async runTests() {
     for (let file of this.testFiles) {
+      beforEaches = [];
+      global.beforEach = (fn) => {
+        beforeEaches.push(fn);
+      };
       global.it = (desc, fn) => {
         console.log(desc);
       };
