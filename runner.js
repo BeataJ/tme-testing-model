@@ -25,15 +25,15 @@ class Runner {
           console.log(chalk.bgGreen(`\tOK - ${desc}`));
         } catch (err) {
           const message = err.message.replace(/\n/g, '\n\t\t');
-          console.log(chalk.red(`\tX - ${desc}`));
-          console.log(chalk.red('\t', message));
+          console.log(chalk.bgRedBright(`\tX - ${desc}`));
+          console.log(chalk.bgRedBright('\t', message));
         }
       };
 
       try {
         require(file.name);
       } catch (err) {
-        console.log(chalk.red(err));
+        console.log(chalk.bgRedBright(err));
       }
     }
   }
