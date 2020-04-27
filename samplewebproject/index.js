@@ -13,4 +13,4 @@ document.querySelector('form').addEventListener('submit', (e) => {
   }
 });
 
-window.stuffLoaded = true;
+// window.stuffLoaded = true;
